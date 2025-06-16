@@ -3,6 +3,7 @@ from service.productApi import fetch_product_details
 from service.feedbackApi import addUserFeedback
 from model import FeedbackModel
 
+
 st.markdown(
     "<h2 style='text-align: center;'>Your Feedback is important for us 😎</h2>",
     unsafe_allow_html=True
@@ -12,6 +13,7 @@ st.divider()
 result = fetch_product_details()
 st.subheader("Product Details")
 
+
 selectedproduct = st.selectbox(
     "Select the product to provide your feedback!!",
     options=result,
@@ -19,7 +21,7 @@ selectedproduct = st.selectbox(
     index=None,
     accept_new_options=True,
     placeholder= "Your feedback makes us to improve",
-    key="selected_product"
+    key="product"
 )
 
 

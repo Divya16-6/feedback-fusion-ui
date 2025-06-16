@@ -1,10 +1,11 @@
 import requests
 import streamlit as st
 from model.FeedbackModel import userFeedback
+from config import BASE_URL
 
 def addUserFeedback(userFeedback: userFeedback):
     try:
-        response = requests.post("http://127.0.0.1:8000/model/generation", json = userFeedback.dict())
+        response = requests.post(f"{BASE_URL}/model/generation", json = userFeedback.dict())
         if response.status_code == 200:
             return response.json()
         else:
