@@ -10,4 +10,4 @@ if ENV == "prod":
 else:
     load_dotenv(".env.dev")
 
-BASE_URL = os.getenv("BASE_URL") or st.secrets["BASE_URL"]
+BASE_URL = st.secrets["BASE_URL"] or os.getenv("BASE_URL")
