@@ -35,7 +35,7 @@ feedback-fusion-frontend/
 - Clone the repository
 
 Install the dependencies
-- pip install streamlit pydantic
+- pip install requirements.txt
 
 Run the application
 - streamlit run app.py
